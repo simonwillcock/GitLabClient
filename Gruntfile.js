@@ -41,7 +41,8 @@ module.exports = function(grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'nyan'
+          reporter: 'nyan',
+          reporter: 'mocha-lcov-reporter'
         },
         src: ['test/*.js']
       }

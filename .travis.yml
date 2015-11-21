@@ -10,4 +10,6 @@ before_script:
   - npm install -g grunt-cli
 script:
   - grunt test --verbose
-  - grunt coveralls:travis
+  # - grunt coveralls:travis
+after_success:
+    - coveralls
