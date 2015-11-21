@@ -53,46 +53,38 @@ module.exports = function(grunt) {
         basePath: 'test/coverage/instrument/'
       }
     },
-    mochaTest: {
-      test: {
-        options: {
-          reporter: 'spec'
-        },
-        src: ['test/*.js']
-      }
-    },
-    mochacov: {
+    mocha_istanbul: {
       coverage: {
+        src: 'test',
         options: {
-          coveralls: true
+            mask: '*.spec.js'
         }
       },
-      test: {
+      coveralls: {
+        src: ['test'],
         options: {
-          reporter: 'spec'
+          coverage: true,
+          check: {
+            lines: 25,
+            statements: 25
+          },
+          root: './lib',
+          reportFormats: ['cobertura','lcovonly']
         }
       },
-      options: {
-        files: 'test/*.js'
+      istanbul_check_coverage: {
+        default: {
+          options: {
+            coverageFolder: 'coverage*',
+            check: {
+              lines: 80,
+              statements: 80
+            }
+          }
+        }
       }
     },
-    clean: ['test/coverage'],
-    reloadTasks : {
-      rootPath : 'test/coverage/instrument'
-    },
-    storeCoverage: {
-      options: {
-        dir: 'test/coverage/reports'
-      }
-    },
-    makeReport: {
-      src: 'test/coverage/reports/**/*.json',
-      options: {
-        type: 'lcov',
-        dir: 'test/coverage/reports',
-        print: 'detail'
-      }
-    },
+    clean: ['coverage'],
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -111,8 +103,8 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [ 'concat', 'uglify']); //'mochaTest', removed because jquery
 
   // Specific tasks
-  grunt.registerTask('test', ['mochacov:test']);
-  grunt.registerTask('coverage', ['clean','mochacov:coverage']); //['env:coverage','clean','instrument','reloadTasks','mochaTest','storeCoverage','makeReport']);
+  grunt.registerTask('coveralls', ['mocha_istanbul:coveralls','clean']);
+  grunt.registerTask('coverage', ['mocha_istanbul:coverage','clean']);
   grunt.registerTask('hint', ['jshint']);
 
 };

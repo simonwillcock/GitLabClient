@@ -9,5 +9,4 @@ before_script:
   - npm --version
   - npm install -g grunt-cli
 script:
-  - grunt test --verbose
-  - grunt coverage --verbose
+  - grunt coveralls --verbose
