@@ -1,9 +1,13 @@
 {
   "name": "GitLabClient",
   "version": "0.1.0",
-  "homepage": "",
+  "homepage": "https://github.com/simonwillcock/GitLabClient",
   "author": {
     "name": "Simon Willcock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonwillcock/GitLabClient"
   },
   "scripts": {
     "test": "grunt mochaTest"
@@ -15,6 +19,7 @@
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "~0.4.4",
+    "grunt-coveralls": "^1.0.0",
     "grunt-mocha-test": "~0.7.0",
     "jquery": "2.x",
     "matchdep": "~0.1.2"

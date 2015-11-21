@@ -55,10 +55,18 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test'] //, 'qunit'
       }
+    },
+    coveralls: {
+      options: {
+        force: false
+      },
+      travis: {
+        src: 'test/coverage/lcov.info'
+      }
     }
   });
 
-  
+
 
   // Default task.
   grunt.registerTask('default', [ 'concat', 'uglify']); //'mochaTest', removed because jquery
