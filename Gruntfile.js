@@ -69,7 +69,7 @@ module.exports = function(grunt) {
             statements: 25
           },
           root: './lib',
-          reportFormats: ['cobertura','lcovonly']
+          reportFormats: ['html','lcovonly']
         }
       },
       istanbul_check_coverage: {
@@ -97,6 +97,14 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.event.on('coverage', function(lcov, done){
+      require('coveralls').handleInput(lcov, function(err){
+          if (err) {
+              return done(err);
+          }
+          done();
+      });
+  });
 
 
   // Default task.
