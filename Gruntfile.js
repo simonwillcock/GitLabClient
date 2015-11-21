@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       test: {
         options: {
           reporter: 'nyan',
-          reporter: 'mocha-lcov-reporter'
+          reporter: 'spec'
         },
         src: ['test/*.js']
       }
@@ -57,12 +57,14 @@ module.exports = function(grunt) {
         tasks: ['jshint:lib_test'] //, 'qunit'
       }
     },
-    coveralls: {
-      options: {
-        force: false
+    mochacov: {
+      coverage: {
+        options: {
+          coveralls: true
+        }
       },
-      travis: {
-        src: 'test/coverage/lcov.info'
+      options: {
+        files: 'test/*.js'
       }
     }
   });
@@ -74,6 +76,7 @@ module.exports = function(grunt) {
 
   // Specific tasks
   grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('travis', ['mochacov:coverage']);
   grunt.registerTask('hint', ['jshint']);
 
 };
