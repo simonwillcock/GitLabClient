@@ -5,6 +5,9 @@
   "author": {
     "name": "Simon Willcock"
   },
+  "scripts": {
+    "test": "grunt mochaTest"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",

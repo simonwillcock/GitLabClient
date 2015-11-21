@@ -4,3 +4,9 @@ node_js:
   - 0.12
   - 4
   - 5
+before_scrept:
+  - node --version
+  - npm --version
+  - npm install -g grunt-cli
+script:
+  - grunt test --verbose
