@@ -11,5 +11,3 @@ before_script:
 script:
   - grunt test --verbose
   # - grunt coveralls:travis
-after_success:
-    - coveralls
