@@ -4,7 +4,7 @@ node_js:
   - 0.12
   - 4
   - 5
-before_scrept:
+before_script:
   - node --version
   - npm --version
   - npm install -g grunt-cli
