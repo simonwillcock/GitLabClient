@@ -41,11 +41,7 @@ module.exports = function(grunt) {
         src: ['lib/{,*/}*.js', 'test/{,*/}*.js']
       }
     },
-    env: {
-      coverage: {
-        APP_DIR_FOR_CODE_COVERAGE: 'test/coverage/instrument/lib/'
-      }
-    },
+
     instrument: {
       files: 'lib/*.js',
       options: {
@@ -53,6 +49,7 @@ module.exports = function(grunt) {
         basePath: 'test/coverage/instrument/'
       }
     },
+ 
     mocha_istanbul: {
       coverage: {
         src: 'test',

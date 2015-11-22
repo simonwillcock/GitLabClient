@@ -1,4 +1,5 @@
-/*! GitLabClient - v0.1.0 - 2015-11-20
+/*! GitLabClient - v0.1.0 - 2015-11-22
+* https://github.com/simonwillcock/GitLabClient
 * Copyright (c) 2015 Simon Willcock; Licensed  */
 // Uses AMD or browser globals to create a module.
 
@@ -163,7 +164,7 @@
             }
 
             var deferred = $.Deferred();
-            $.ajax({
+            return $.ajax({
                 url: options.api + url,
                 type: method,
                 headers: headers,

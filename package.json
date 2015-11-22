@@ -29,9 +29,13 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-mocha-istanbul": "^3.0.1",
+    "grunt-mocha-phantomjs": "^2.0.1",
     "istanbul": "^0.4.0",
     "jquery": "2.x",
+    "jsdom": "^7.0.2",
     "matchdep": "~0.1.2",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.0.0",
+    "sinon": "^1.17.2"
   }
 }
