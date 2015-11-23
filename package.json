@@ -10,7 +10,7 @@
     "url": "https://github.com/simonwillcock/GitLabClient"
   },
   "scripts": {
-    "test": "grunt mochaTest"
+    "test": "grunt coverage"
   },
   "config": {
     "blanket": {
