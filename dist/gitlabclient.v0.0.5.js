@@ -1,4 +1,4 @@
-/*! gitlabclient - v0.0.4 - 2015-11-23
+/*! gitlabclient - v0.0.5 - 2015-11-24
 * https://github.com/simonwillcock/GitLabClient
 * Copyright (c) 2015 Simon Willcock; Licensed  */
 // Uses AMD or browser globals to create a module.
@@ -168,7 +168,7 @@
                 url: options.api + url,
                 type: method,
                 headers: headers,
-                data: JSON.stringify(data),
+                data: (method === 'GET') ? data : JSON.stringify(data),
                 dataType: 'json',
                 contentType: 'application/json',
                 success: function (data) {
