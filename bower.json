@@ -1,6 +1,6 @@
 {
   "name": "gitlabclient",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {},
   "devDependencies": {},
   "homepage": "https://github.com/simonwillcock/GitLabClient",
@@ -8,7 +8,7 @@
     "Simon Willcock <simon@willcock.com.au>"
   ],
   "description": "A JS wrapper for the GitLab API",
-  "main": "gitlabclient.v0.0.1.js",
+  "main": "gitlabclient.v0.0.2.js",
   "moduleType": [
     "amd",
     "globals",
