@@ -1,9 +1,28 @@
 {
-  "name": "GitLabClient",
-  "version": "0.0.0",
+  "name": "gitlabclient",
+  "version": "0.0.1",
   "dependencies": {},
-  "devDependencies": {
-    
-  }
+  "devDependencies": {},
+  "homepage": "https://github.com/simonwillcock/GitLabClient",
+  "authors": [
+    "Simon Willcock <simon@willcock.com.au>"
+  ],
+  "description": "A JS wrapper for the GitLab API",
+  "main": "GitLabClient.v0.0.1.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "gitlab"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
-
