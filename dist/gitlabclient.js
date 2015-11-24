@@ -1,4 +1,4 @@
-/*! gitlabclient - v0.0.5 - 2015-11-24
+/*! gitlabclient - v0.0.6 - 2015-11-24
 * https://github.com/simonwillcock/GitLabClient
 * Copyright (c) 2015 Simon Willcock; Licensed  */
 // Uses AMD or browser globals to create a module.
